@@ -1,0 +1,88 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+  list-style-type: disc;    /* ensures bullets */
+  margin-left: 20px;        /* indentation */
+  padding-left: 20px;       /* extra padding for clarity */
+}
+
+ul ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+ul ul ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+/* List items */
+li {
+  padding: 4px 0;  /* spacing between bullets */
+}
+
+/* Add spacing for the whole page */
+body {
+  background-color: #F8F8F2;
+  color: #2D2C2C;
+  padding: 50px;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+/* Headings spacing */
+h1 {
+  color: #C81D25;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding: 4px 0;
+  text-align: center;
+}
+
+h2 {
+  color: #C81D25;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding: 4px 0;
+}
+
+p {
+  margin-bottom: 16px;
+  padding: 4px 0;
+}
+
+a {
+  color: #2D2C2C;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #2D2C2C;
+  text-decoration: none;
+}
+
+.centered-link {
+  text-align: center;
+}
+
+.bottom-video {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.demo-video {
+  max-width: 300px;
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
