@@ -23,12 +23,10 @@ ul ul ul {
   padding-left: 20px;
 }
 
-/* List items */
 li {
-  padding: 4px 0;  /* spacing between bullets */
+  padding: 4px 0;
 }
 
-/* Add spacing for the whole page */
 body {
   background-color: #F8F8F2;
   color: #2D2C2C;
@@ -37,7 +35,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Headings spacing */
 h1 {
   color: #C81D25;
   margin-top: 24px;
@@ -74,17 +71,17 @@ a:hover {
 
 .button-container {
   display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: flex-start;   /* keep it near the top, not full center */
-  height: auto;              /* no longer full viewport height */
-  margin-top: 60px;          /* add spacing from top */
+  justify-content: center; 
+  align-items: flex-start;  
+  height: auto;            
+  margin-top: 60px;        
 }
 
 .button-wrapper {
   display: inline-block;
   width: auto;
-  min-width: 220px; /* match button width */
-  height: 50px;     /* reduced wrapper height */
+  min-width: 220px; 
+  height: 50px;    
   position: relative;
 }
 
@@ -134,8 +131,8 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px; /* smaller gap helps keep text on one line */
-  white-space: nowrap; /* prevents wrapping */
+  gap: 6px; 
+  white-space: nowrap; 
 }
 
 .add-button .text {
@@ -145,5 +142,5 @@ a:hover {
 
 .add-button .icon svg {
   vertical-align: middle;
-  transform: rotate(-5deg); /* gives it that casual Trader Joe’s angle */
+  transform: rotate(-5deg); 
 }
