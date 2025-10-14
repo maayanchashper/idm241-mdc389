@@ -130,12 +130,20 @@ a:hover {
 }
 
 /* ICON + TEXT */
-.add-button .icon {
-  font-size: 18px;
-  transition: all 0.2s ease;
+.add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* smaller gap helps keep text on one line */
+  white-space: nowrap; /* prevents wrapping */
 }
 
 .add-button .text {
   letter-spacing: 0.5px;
   transition: all 0.2s ease;
+}
+
+.add-button .icon svg {
+  vertical-align: middle;
+  transform: rotate(-5deg); /* gives it that casual Trader Joe’s angle */
 }
