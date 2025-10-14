@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+  list-style-type: disc;    /* ensures bullets */
+  margin-left: 20px;        /* indentation */
+  padding-left: 20px;       /* extra padding for clarity */
+}
+
+ul ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+ul ul ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+/* List items */
+li {
+  padding: 4px 0;  /* spacing between bullets */
+}
+
+/* Add spacing for the whole page */
+body {
+  background-color: #F8F8F2;
+  color: #2D2C2C;
+  padding: 50px;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+/* Headings spacing */
+h1 {
+  color: #C81D25;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding: 4px 0;
+  text-align: center;
+}
+
+h2 {
+  color: #C81D25;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding: 4px 0;
+}
+
+p {
+  margin-bottom: 16px;
+  padding: 4px 0;
+}
+
+a {
+  color: #2D2C2C;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #2D2C2C;
+  text-decoration: none;
+}
+
+.centered-link {
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: flex-start;   /* keep it near the top, not full center */
+  height: auto;              /* no longer full viewport height */
+  margin-top: 60px;          /* add spacing from top */
+}
+
+.button-wrapper {
+  display: inline-block;
+  width: auto;
+  min-width: 220px; /* match button width */
+  height: 50px;     /* reduced wrapper height */
+  position: relative;
+}
+
+/* BASE BUTTON */
+.add-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: #ffffff;
+  border: 2px solid #9C6644;
+  color: #A8231C;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 50px;
+  padding: 12px 28px;
+  box-shadow: 4px 6px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+/* HOVER ON */
+.add-button:hover:not(.clicked) {
+  background-color: #F7F4EE;
+  border: 4px solid #9C6644;
+  box-shadow: 6px 9px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* CLICKED STATE */
+.add-button.clicked {
+  background-color: #ffffff;
+  border: 4px solid #A8231C;
+  color: #A8231C;
+  box-shadow: 4px 6px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* ICON + TEXT */
+.add-button .icon {
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.add-button .text {
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
