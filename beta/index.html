@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDM241 Beta - Trader Joe's Microinteractions</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+    <h1>Beta: Trader Joe's Microinteractions</h1>
+
+<p class="centered-link">
+  Original Interface:
+  <a href="https://www.traderjoes.com/home/products/category/cool-desserts-107" target="_blank">
+    Trader Joe's - From the Freezer
+  </a>
+</p>
+
+
+<h2>Triggers:</h2>
+  <ul>
+    <li>Object: “+ ADD TO LIST” button centered at the bottom of a product’s card
+      <ul>
+        <li>Click off</li>
+      </ul>
+    </li>
+    <li>Object: Rectangular food item card that is repeated throughout page, below “Cool Desserts” text
+      <ul>
+        <li>Hover on</li>
+        <li>Hover off</li>
+        <li>Click</li>
+      </ul>
+    </li>
+    <li>Object: Rectangular food item image at the top of item card
+      <ul>
+        <li>Hover on</li>
+        <li>Hover off</li>
+        <li>Click</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Rules:</h2>
+  <ul>
+    <li>Object: “+ ADD TO LIST” button
+      <ul>
+        <li>Click off:
+          <ul>
+            <li>Button width shrinks back to default width</li>
+            <li>Check mark icon switches back to default plus icon</li>
+            <li>Text switches back to default “ADD TO LIST”</li>
+            <li>Border color fills with default brownish-red color</li>
+            <li>Button boarder weight shrinks back down (about 1px)</li>
+            <li>Item is removed from internal shopping list database (and interface on different page)</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>Object: Food item card
+      <ul>
+        <li>Hover on
+          <ul>
+            <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+            <li>Mouse switches to pointer</li>
+          </ul>
+        </li>
+        <li>Hover off
+          <ul>
+            <li>Shadow effect disappears from beneath card, defaulting it back to flat state</li>
+            <li>Mouse switches back to default arrow</li>
+          </ul>
+        </li>
+        <li>Click
+          <ul>
+            <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+            <li>Mouse switches to pointer</li>
+            <li>Clicking navigates to item description page</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>Object: Food item image
+      <ul>
+        <li>Hover on
+          <ul>
+            <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+            <li>Mouse switches to pointer</li>
+            <li>Image animates and flips to nutrition label</li>
+          </ul>
+        </li>
+        <li>Hover off
+          <ul>
+            <li>Shadow effect disappears from beneath card, defaulting it back to flat state</li>
+            <li>Mouse switches back to default arrow</li>
+            <li>Image animates and flips back to item image</li>
+          </ul>
+        </li>
+        <li>Click
+          <ul>
+            <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+            <li>Mouse switches to pointer</li>
+            <li>Clicking navigates to item description page</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Feedback:</h2>
+  <ul>
+    <li>Object: “+ ADD TO LIST” button
+      <ul>
+        <li>Click:
+          <ul>
+            <li>Button width shrinks back to default width</li>
+            <li>Check mark icon switches back to default plus icon</li>
+            <li>Text switches back to default “ADD TO LIST”</li>
+            <li>Border color fills with default brownish-red color</li>
+            <li>Button boarder weight shrinks back down (about 1px)</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>Object: Food item card
+      <ul>
+        <li>Hover on
+          <ul>
+            <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+            <li>Mouse switches to pointer</li>
+          </ul>
+        </li>
+        <li>Hover off
+          <ul>
+            <li>Shadow effect disappears from beneath card, defaulting it back to flat state</li>
+            <li>Mouse switches back to default arrow</li>
+          </ul>
+        </li>
+        <li>Click
+          <ul>
+            <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+            <li>Mouse switches to pointer</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>Object: Food item image
+      <ul>
+        <li>Hover on
+          <ul>
+            <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+            <li>Mouse switches to pointer</li>
+            <li>Image animates and flips to nutrition label</li>
+          </ul>
+        </li>
+        <li>Hover off
+          <ul>
+            <li>Shadow effect disappears from beneath card, defaulting it back to flat state</li>
+            <li>Mouse switches back to default arrow</li>
+            <li>Image animates and flips back to item image</li>
+          </ul>
+        </li>
+        <li>Click
+          <ul>
+            <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+            <li>Mouse switches to pointer</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>Loops:</h2>
+  <ul>
+    <li>No loops</li>
+  </ul>
+
+  <h2>Modes:</h2>
+  <ul>
+    <li>No modes</li>
+  </ul>
+
+<div class="bottom-video">
+  <video autoplay muted loop playsinline class="button">
+    <source src="button.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+    <video autoplay muted loop playsinline class="card">
+    <source src="itemcard.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+    <video autoplay muted loop playsinline class="image">
+    <source src="itemimage.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</body>
+</html>
