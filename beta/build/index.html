@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDM241 Beta Build - Trader Joe's Microinteractions</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+    <h1>Beta Build: Trader Joe's Microinteractions</h1>
+
+<div class="product-card" onclick="goToProductPage()">
+
+  <div class="image-wrapper">
+    <img class="front-img" src="item-image.png" alt="Mango Cream Bars">
+    <img class="back-img" src="item-nutrition.png" alt="Nutrition Label">
+  </div>
+
+  <p class="category">Cool Desserts</p>
+  <h3 class="title">Mango Cream Bars</h3>
+  <p class="price">$3.49<span class="unit">/15 Fl Oz</span></p>
+
+<div class="button-wrapper">
+  <button class="add-button" onclick="toggleAdd(event)">
+    <span class="icon">＋</span>
+    <span class="label">ADD TO LIST</span>
+  </button>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+<h2>Triggers:</h2>
+<ul>
+  <li>Object: “+ ADD TO LIST” button centered at the bottom of a product’s card
+    <ul>
+      <li>Hover on</li>
+      <li>Hover off</li>
+      <li>Click on</li>
+      <li>Click off</li>
+    </ul>
+  </li>
+
+  <li>Object: Rectangular food item card that is repeated throughout page, below “Cool Desserts” text
+    <ul>
+      <li>Hover on</li>
+      <li>Hover off</li>
+      <li>Click</li>
+    </ul>
+  </li>
+
+  <li>Object: Rectangular food item image at the top of item card
+    <ul>
+      <li>Hover on</li>
+      <li>Hover off</li>
+      <li>Click</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Rules:</h2>
+<ul>
+  <li>Object: “+ ADD TO LIST” button
+    <ul>
+      <li>Hover on:
+        <ul>
+          <li>Cursor changes to finger</li>
+          <li>Drop shadow grows (about 20% opacity)</li>
+          <li>Button border weight thickens (about 3px)</li>
+          <li>Button color fills with beige</li>
+        </ul>
+      </li>
+
+      <li>Hover off:
+        <ul>
+          <li>Cursor changes back to default arrow</li>
+          <li>Drop shadow shrinks back to default</li>
+          <li>Button border weight thins back to default</li>
+          <li>Button color fills back to default white</li>
+        </ul>
+      </li>
+
+      <li>Click on:
+        <ul>
+          <li>Button gets wider</li>
+          <li>+ icon switches to check mark</li>
+          <li>Text switches to "ADDED TO LIST"</li>
+          <li>Border color fills with red</li>
+          <li>Button border weight thickens (about 3px)</li>
+          <li>Item is added to internal shopping list database (and interface on different page)</li>
+        </ul>
+      </li>
+
+      <li>Click off:
+        <ul>
+          <li>Button width shrinks back to default width</li>
+          <li>Check mark icon switches back to default plus icon</li>
+          <li>Text switches back to default “ADD TO LIST”</li>
+          <li>Border color fills with default brownish-red color</li>
+          <li>Button border weight shrinks back down (about 1px)</li>
+          <li>Item is removed from internal shopping list database (and interface on different page)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>Object: Food item card
+    <ul>
+      <li>Hover on
+        <ul>
+          <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+          <li>Mouse switches to pointer</li>
+        </ul>
+      </li>
+      <li>Hover off
+        <ul>
+          <li>Shadow effect disappears from beneath card, defaulting it back to flat state</li>
+          <li>Mouse switches back to default arrow</li>
+        </ul>
+      </li>
+      <li>Click
+        <ul>
+          <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+          <li>Mouse switches to pointer</li>
+          <li>Clicking navigates to item description page</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>Object: Food item image
+    <ul>
+      <li>Hover on
+        <ul>
+          <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+          <li>Mouse switches to pointer</li>
+          <li>Image animates and flips to nutrition label</li>
+        </ul>
+      </li>
+      <li>Hover off
+        <ul>
+          <li>Shadow effect disappears from beneath card, defaulting it back to flat state</li>
+          <li>Mouse switches back to default arrow</li>
+          <li>Image animates and flips back to item image</li>
+        </ul>
+      </li>
+      <li>Click
+        <ul>
+          <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+          <li>Mouse switches to pointer</li>
+          <li>Clicking navigates to item description page</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Feedback:</h2>
+<ul>
+  <li>Object: “+ ADD TO LIST” button
+    <ul>
+      <li>Hover on:
+        <ul>
+          <li>Cursor changes to finger</li>
+          <li>Drop shadow grows (about 20% opacity)</li>
+          <li>Button border weight thickens (about 3px)</li>
+          <li>Button color fills with beige</li>
+        </ul>
+      </li>
+      <li>Hover off:
+        <ul>
+          <li>Cursor changes back to default arrow</li>
+          <li>Drop shadow shrinks back to default</li>
+          <li>Button border weight thins back to default</li>
+          <li>Button color fills back to default white</li>
+        </ul>
+      </li>
+      <li>Click on:
+        <ul>
+          <li>Button gets wider</li>
+          <li>+ icon switches to check mark</li>
+          <li>Text switches to "ADDED TO LIST"</li>
+          <li>Border color fills with red</li>
+          <li>Button border weight thickens (about 3px)</li>
+        </ul>
+      </li>
+      <li>Click off:
+        <ul>
+          <li>Button width shrinks back to default width</li>
+          <li>Check mark icon switches back to default plus icon</li>
+          <li>Text switches back to default “ADD TO LIST”</li>
+          <li>Border color fills with default brownish-red color</li>
+          <li>Button border weight shrinks back down (about 1px)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>Object: Food item card
+    <ul>
+      <li>Hover on
+        <ul>
+          <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+          <li>Mouse switches to pointer</li>
+        </ul>
+      </li>
+      <li>Hover off
+        <ul>
+          <li>Shadow effect disappears from beneath card, defaulting it back to flat state</li>
+          <li>Mouse switches back to default arrow</li>
+        </ul>
+      </li>
+      <li>Click
+        <ul>
+          <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+          <li>Mouse switches to pointer</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+  <li>Object: Food item image
+    <ul>
+      <li>Hover on
+        <ul>
+          <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+          <li>Mouse switches to pointer</li>
+          <li>Image animates and flips to nutrition label</li>
+        </ul>
+      </li>
+      <li>Hover off
+        <ul>
+          <li>Shadow effect disappears from beneath card, defaulting it back to flat state</li>
+          <li>Mouse switches back to default arrow</li>
+          <li>Image animates and flips back to item image</li>
+        </ul>
+      </li>
+      <li>Click
+        <ul>
+          <li>Shadow effect appears beneath card, giving illusion that card is lifted</li>
+          <li>Mouse switches to pointer</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Loops:</h2>
+<ul><li>No loops</li></ul>
+
+<h2>Modes:</h2>
+<ul><li>No modes</li></ul>
+
+</body>
+</html>
