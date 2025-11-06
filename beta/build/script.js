@@ -15,3 +15,12 @@ function toggleAdd(event) {
     label.textContent = "ADD TO LIST";
   }
 }
+
+function goToProductPage() {
+  window.open(
+    "https://www.traderjoes.com/home/products/pdp/mango-cream-bars-074869",
+    "_blank",
+    "noopener noreferrer"
+  );
+}
+
