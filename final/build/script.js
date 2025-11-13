@@ -25,9 +25,19 @@ function goToProductPage() {
 }
 
 function toggleHeart(event) {
-  event.stopPropagation(); 
+  event.stopPropagation();
   const button = event.currentTarget;
+
+  // Trigger animation
+  button.classList.add("animate");
+
+  // Toggle fill
   button.classList.toggle("filled");
+
+  // Remove animation class after it ends so it can replay next click
+  setTimeout(() => {
+    button.classList.remove("animate");
+  }, 400);
 }
 
 function copyLink(event) {

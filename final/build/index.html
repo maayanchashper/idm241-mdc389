@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDM241 Beta Build - Trader Joe's Microinteractions</title>
+    <title>IDM241 Final Build - Trader Joe's Microinteractions</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
-    <h1>Final Description: Trader Joe's Microinteractions</h1>
+    <h1>Final Build: Trader Joe's Microinteractions</h1>
 
     <p class="centered-link">
       Original Interface:
@@ -18,6 +18,43 @@
     </p>
 
 <script src="script.js"></script>
+
+
+<div class="product-card" onclick="goToProductPage()">
+
+  <div class="image-wrapper">
+    <img class="front-img" src="item-image.png" alt="Mango Cream Bars">
+    <img class="back-img" src="item-nutrition.png" alt="Nutrition Label">
+  </div>
+
+  <div class="category-row">
+  <p class="category">Cool Desserts</p>
+
+  <div class="icon-row">
+    <!-- Heart Button -->
+    <button class="icon-button heart-button" onclick="toggleHeart(event)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
+    </button>
+
+    <!-- Copy Link Button -->
+    <button class="icon-button copy-button" onclick="copyLink(event)">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy-icon lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+    </button>
+
+    <span class="copy-feedback">Link copied!</span>
+  </div>
+</div>
+
+  <h3 class="title">Mango Cream Bars</h3>
+  <p class="price">$3.49<span class="unit">/15 Fl Oz</span></p>
+
+<div class="button-wrapper">
+  <button class="add-button" onclick="toggleAdd(event)">
+    <span class="icon">＋</span>
+    <span class="label">ADD TO LIST</span>
+  </button>
+</div>
+</div>
 
 
 <h2>Triggers:</h2>
@@ -162,16 +199,16 @@
       <li>Click on
         <ul>
           <li>Heart grows and shrinks</li>
-          <li>Heart fills with red</li>
-          <li>Heart border is removed</li>
+          <li>Heart fades in with red</li>
+          <li>Heart border fades to red</li>
           <li>Item is added to internal favorites list database (and interface on different page)</li>
         </ul>
       </li>
       <li>Click off
         <ul>
           <li>Heart icon grows and shrinks</li>
-          <li>Heart's fill is removed to default</li>
-          <li>Heart's border returns to default</li>
+          <li>Heart's red fill fades out back to default</li>
+          <li>Heart's border fades back to default</li>
           <li>Item is removed from internal favorites list database (and interface on different page)</li>
         </ul>
       </li>
@@ -285,15 +322,15 @@
       <li>Click on
         <ul>
           <li>Heart grows and shrinks</li>
-          <li>Heart fills with red</li>
-          <li>Heart border is removed</li>
+          <li>Heart fades in with red</li>
+          <li>Heart border fades to red</li>
         </ul>
       </li>
       <li>Click off
         <ul>
           <li>Heart icon grows and shrinks</li>
-          <li>Heart's fill is removed to default</li>
-          <li>Heart's border returns to default</li>
+          <li>Heart's red fill fades out back to default</li>
+          <li>Heart's border fades back to default</li>
         </ul>
       </li>
     </ul>
@@ -316,42 +353,6 @@
 
 <h2>Modes:</h2>
 <ul><li>No modes</li></ul>
-
-<div class="product-card" onclick="goToProductPage()">
-
-  <div class="image-wrapper">
-    <img class="front-img" src="item-image.png" alt="Mango Cream Bars">
-    <img class="back-img" src="item-nutrition.png" alt="Nutrition Label">
-  </div>
-
-  <div class="category-row">
-  <p class="category">Cool Desserts</p>
-
-  <div class="icon-row">
-    <!-- Heart Button -->
-    <button class="icon-button heart-button" onclick="toggleHeart(event)">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-icon lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg>
-    </button>
-
-    <!-- Copy Link Button -->
-    <button class="icon-button copy-button" onclick="copyLink(event)">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy-icon lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-    </button>
-
-    <span class="copy-feedback">Link copied!</span>
-  </div>
-</div>
-
-  <h3 class="title">Mango Cream Bars</h3>
-  <p class="price">$3.49<span class="unit">/15 Fl Oz</span></p>
-
-<div class="button-wrapper">
-  <button class="add-button" onclick="toggleAdd(event)">
-    <span class="icon">＋</span>
-    <span class="label">ADD TO LIST</span>
-  </button>
-</div>
-</div>
 
 </body>
 </html>
