@@ -1,0 +1,319 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+  list-style-type: disc;    /* ensures bullets */
+  margin-left: 20px;        /* indentation */
+  padding-left: 20px;       /* extra padding for clarity */
+}
+
+ul ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+ul ul ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+li {
+  padding: 4px 0;
+}
+
+body {
+  background-color: #F8F8F2;
+  color: #2D2C2C;
+  padding: 50px;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #C81D25;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding: 4px 0;
+  text-align: center;
+}
+
+h2 {
+  color: #C81D25;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding: 4px 0;
+}
+
+p {
+  margin-bottom: 16px;
+  padding: 4px 0;
+}
+
+a {
+  color: #2D2C2C;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #2D2C2C;
+  text-decoration: none;
+}
+
+.centered-link {
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;  
+  height: auto;            
+  margin-top: 60px;        
+}
+
+.product-card {
+  width: 280px;
+  border: 1px solid #E6E1D8;
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 40px auto;
+  transition: box-shadow 0.25s ease;
+  cursor: default;
+}
+
+/* Card Lift on Hover */
+.product-card:hover {
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Image flip */
+.image-wrapper {
+  width: 100%;
+  height: 230px;
+  position: relative;
+  perspective: 800px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transition: transform 0.5s ease;
+}
+
+.front-img {
+  transform: rotateY(0deg);
+}
+
+.back-img {
+  transform: rotateY(180deg);
+}
+
+/* only flip when hovering the image */
+.image-wrapper:hover .front-img {
+  transform: rotateY(180deg);
+}
+
+.image-wrapper:hover .back-img {
+  transform: rotateY(360deg);
+}
+
+/* Card text */
+.category {
+  color: #8B4A2B;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.title {
+  color: #2D2C2C;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.unit { font-weight: normal; }
+
+.button-wrapper {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.add-button {
+  height: 90%;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 2px solid #A34C30;
+  border-radius: 30px;
+  font-size: 15px;
+  color: #A34C30;
+  cursor: pointer;
+  box-shadow: 4px 6px 0px rgba(0,0,0,0.15);
+  transition: background 0.25s ease, box-shadow 0.25s ease, border-width 0.25s ease, padding 0.25s ease;
+}
+
+.add-button:hover:not(.added) {
+  cursor: pointer;
+  border-width: 3px;               
+  background-color: #F7F4EE;
+  box-shadow: 6px 9px 0px rgba(0,0,0,0.20);
+}
+
+/* CLICKED STATE */
+.add-button.added {
+  padding: 10px 36px;            
+  border-width: 3px;                
+  border-color: #A8231C;           
+  color: #A8231C;
+  background-color: #FFFFFF;
+  box-shadow: 6px 9px 0px rgba(0,0,0,0.20);
+}
+
+.icon {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 0;
+}
+
+.category-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-row {
+  display: flex;
+  gap: 10px;
+  position: relative;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.icon-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: #2D2C2C;
+  fill: none;
+  stroke-width: 2;
+  transition: fill 0.25s ease, stroke 0.25s ease;
+}
+
+/* Heart Filled State */
+.heart-button.filled .heart-icon {
+  fill: #A8231C;
+  stroke: #A8231C;
+}
+
+/* Copy Feedback */
+.copy-feedback {
+  position: absolute;
+  bottom: -18px;
+  right: 0;
+  font-size: 12px;
+  color: #A8231C;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Show feedback when triggered */
+.copy-feedback.show {
+  opacity: 1;
+}
+
+.icon-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: #2D2C2C;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+  transition: fill 0.25s ease, stroke 0.25s ease, transform 0.2s ease;
+}
+
+/* Slight pop animation on click */
+.icon-button:active svg {
+  transform: scale(1.1);
+}
+
+/* Heart filled state */
+.heart-button.filled svg {
+  fill: #A8231C;
+  stroke: #A8231C;
+}
+
+/* Copy feedback text reposition + restyle */
+.copy-feedback {
+  position: absolute;
+  right: -10px; /* moves right */
+  bottom: -12px; /* moves down */
+  font-size: 12px;
+  font-weight: 500;
+  color: #2D2C2C;
+  opacity: 0;
+  white-space: nowrap; /* keep one line */
+  transform: translate(8px, 10px); /* diagonal offset */
+  transition: opacity 0.3s ease;
+}
+
+.copy-feedback.show {
+  opacity: 1;
+}
+
+/* Heart default state */
+.heart-button svg path {
+  fill: #A8231C;         /* red fill, starts invisible */
+  fill-opacity: 0;        /* invisible initially */
+  stroke: #2D2C2C;       /* black outline */
+  stroke-opacity: 1;      /* fully visible */
+  stroke-width: 2.5;
+  transition: fill-opacity 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+/* Heart filled state */
+.heart-button.filled svg path {
+  fill-opacity: 1;        /* red fill fades in */
+  stroke: #A8231C;        /* stroke changes to same red */
+  stroke-opacity: 1;      /* stroke fully visible */
+}
+
+.centered-image {
+    display: block;          /* makes margin auto work */
+    margin: 20px auto;       /* centers the image */
+    width: 100%;             /* responsive width */
+    max-width: 800px;        /* prevents it from being too large */
+    height: auto;            /* keeps aspect ratio */
+}
